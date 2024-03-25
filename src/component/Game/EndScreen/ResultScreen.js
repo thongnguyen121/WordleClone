@@ -65,7 +65,6 @@ const ResultScreen = ({won = false}) => {
   const [distribution, setDistribution] = useState(null);
   const [wordInDay, setWordInDay] = useState('');
   const currentDate = new Date().toISOString().split('T')[0];
-  const [loaded, setloaded] = useState(false);
   const dayKey = `day-${currentDate}`;
 
   useEffect(() => {
@@ -115,7 +114,7 @@ const ResultScreen = ({won = false}) => {
     setMaxStreak(_maxStreak);
     setWordInDay(data[dayKey].word);
     
-    setloaded(true);
+    // setloaded(true);
 
     const dist = [0, 0, 0, 0, 0, 0];
     values.map(game => {
